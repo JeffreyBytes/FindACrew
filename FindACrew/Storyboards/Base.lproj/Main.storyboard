@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GoO-6S-tKE">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Find A Crew-->
+        <scene sceneID="4wD-I3-6Cy">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController title="Find A Crew" id="iJL-Hg-i2L" customClass="PersonSearchTableViewController" customModule="FindACrew" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xti-Lv-cWQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search for a crewmate" id="FPd-Pa-f5d">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonCell" id="ql1-pJ-Po7" customClass="PersonTableViewCell" customModule="FindACrew" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ql1-pJ-Po7" id="gnp-CI-c1b">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNy-jK-UIS">
+                                            <rect key="frame" x="20" y="11" width="374" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vh-eO-bGQ">
+                                            <rect key="frame" x="20" y="47" width="374" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBD-dM-fG2">
+                                            <rect key="frame" x="20" y="68" width="374" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jNy-jK-UIS" secondAttribute="trailing" id="AdU-oc-mqj"/>
+                                        <constraint firstItem="VBD-dM-fG2" firstAttribute="bottom" secondItem="gnp-CI-c1b" secondAttribute="bottomMargin" id="FZ6-he-mX5"/>
+                                        <constraint firstItem="0Vh-eO-bGQ" firstAttribute="trailing" secondItem="gnp-CI-c1b" secondAttribute="trailingMargin" id="Qgg-km-Ia0"/>
+                                        <constraint firstItem="jNy-jK-UIS" firstAttribute="leading" secondItem="gnp-CI-c1b" secondAttribute="leadingMargin" id="Rww-HC-42N"/>
+                                        <constraint firstItem="0Vh-eO-bGQ" firstAttribute="top" secondItem="jNy-jK-UIS" secondAttribute="bottom" id="YT4-CG-JEv"/>
+                                        <constraint firstItem="VBD-dM-fG2" firstAttribute="leading" secondItem="gnp-CI-c1b" secondAttribute="leadingMargin" id="dKe-Vc-yWL"/>
+                                        <constraint firstItem="0Vh-eO-bGQ" firstAttribute="leading" secondItem="gnp-CI-c1b" secondAttribute="leadingMargin" id="hws-GY-nLY"/>
+                                        <constraint firstItem="VBD-dM-fG2" firstAttribute="top" secondItem="0Vh-eO-bGQ" secondAttribute="bottom" id="jSw-EL-AAV"/>
+                                        <constraint firstItem="VBD-dM-fG2" firstAttribute="trailing" secondItem="gnp-CI-c1b" secondAttribute="trailingMargin" id="jeS-xb-X1q"/>
+                                        <constraint firstItem="jNy-jK-UIS" firstAttribute="top" secondItem="gnp-CI-c1b" secondAttribute="topMargin" id="pDL-gc-dyS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iJL-Hg-i2L" id="CYJ-Af-tP9"/>
+                            <outlet property="delegate" destination="iJL-Hg-i2L" id="HCJ-r2-blz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Find a Crew" id="xut-Av-OfG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gDg-td-eBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1028.985507246377" y="155.35714285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lr7-px-7RP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GoO-6S-tKE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="oLS-dJ-sgO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iJL-Hg-i2L" kind="relationship" relationship="rootViewController" id="swW-Dh-XoJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Egz-yg-Own" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="155.35714285714286"/>
         </scene>
     </scenes>
 </document>
