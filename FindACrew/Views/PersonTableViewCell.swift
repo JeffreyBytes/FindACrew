@@ -9,16 +9,23 @@
 import UIKit
 
 class PersonTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    var person: Person? {
+        didSet {
+            updateViews()
+        }
     }
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var birthYearLabel: UILabel!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    private func updateViews() {
+        
+        guard let person = person else { return }
+        
+        nameLabel.text = person.name
+        genderLabel.text = person.gender
+        birthYearLabel.text = person.birthYear
     }
-
 }
